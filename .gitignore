@@ -1,0 +1,3 @@
+*.tsbuildinfo
+.vscode
+.idea
