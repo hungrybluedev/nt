@@ -1,25 +1,4 @@
-"use strict";
-const gcd = (a, b) => {
-    if (a === b) {
-        return a;
-    }
-    if (a < b) {
-        return gcd(b, a);
-    }
-    if (b < 0n) {
-        return gcd(a, -b);
-    }
-    if (b === 0n) {
-        return a;
-    }
-    let r = a % b;
-    while (r !== 0n) {
-        a = b;
-        b = r;
-        r = a % b;
-    }
-    return b;
-};
+import { gcd } from "./ntlib.js";
 const getInputStringById = (id) => {
     const inputElementOrNull = document.getElementById(id);
     if (!inputElementOrNull) {
@@ -36,13 +15,13 @@ const setResult = (a, b, result) => {
         return;
     }
     paragraph.innerHTML =
-        "<h1>Result</h1><p>The GCD of " +
+        "<h1>Result</h1><p>The GCD of $" +
             a.toString() +
-            " and " +
+            "$ and $" +
             b.toString() +
-            ' is</p><p class="highlighted-result">' +
+            '$ is</p><p class="highlighted-result">$' +
             result.toString() +
-            "</p>";
+            "$</p>";
 };
 const clearResult = () => {
     paragraph.textContent = "";
@@ -55,6 +34,9 @@ const requestGCDFromInputs = () => {
         return;
     }
     setResult(a, b, gcd(a, b));
+    const event = document.createEvent("Event");
+    event.initEvent("DOMContentLoaded", true, true);
+    document.dispatchEvent(event);
 };
 const reportError = (message) => {
     alert(message ||

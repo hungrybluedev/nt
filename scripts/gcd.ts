@@ -1,31 +1,4 @@
-const gcd = (a: bigint, b: bigint): bigint => {
-  // A lot of edge cases:
-  // 1. (a, a) = a
-  if (a === b) {
-    return a;
-  }
-  // 2. (a, b) = (b, a) but having a > b is better for division.
-  if (a < b) {
-    return gcd(b, a);
-  }
-  // 3. Since a > b, we might have b < 0. Ensure add arguments are positive.
-  if (b < 0n) {
-    return gcd(a, -b);
-  }
-  // 4. everything divides 0
-  if (b === 0n) {
-    return a;
-  }
-
-  // The Euclidean Division algorithm
-  let r = a % b;
-  while (r !== 0n) {
-    a = b;
-    b = r;
-    r = a % b;
-  }
-  return b;
-};
+import { gcd } from "./ntlib.js";
 
 const getInputStringById = (id: string): string | null => {
   const inputElementOrNull = document.getElementById(id);
@@ -45,13 +18,13 @@ const setResult = (a: bigint, b: bigint, result: bigint) => {
     return;
   }
   paragraph.innerHTML =
-    "<h1>Result</h1><p>The GCD of " +
+    "<h1>Result</h1><p>The GCD of $" +
     a.toString() +
-    " and " +
+    "$ and $" +
     b.toString() +
-    ' is</p><p class="highlighted-result">' +
+    '$ is</p><p class="highlighted-result">$' +
     result.toString() +
-    "</p>";
+    "$</p>";
 };
 
 const clearResult = () => {
@@ -67,6 +40,9 @@ const requestGCDFromInputs = () => {
     return;
   }
   setResult(a, b, gcd(a, b));
+  const event = document.createEvent("Event");
+  event.initEvent("DOMContentLoaded", true, true);
+  document.dispatchEvent(event);
 };
 
 const reportError = (message: string) => {
