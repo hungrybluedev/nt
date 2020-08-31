@@ -31,11 +31,18 @@ const getInputValue = (id) => {
     const stringValueOrNull = getInputStringById(id);
     return !stringValueOrNull ? null : BigInt(stringValueOrNull);
 };
-const setResult = (result) => {
+const setResult = (a, b, result) => {
     if (!result) {
         return;
     }
-    paragraph.textContent = result.toString();
+    paragraph.innerHTML =
+        "<h1>Result</h1><p>The GCD of " +
+            a.toString() +
+            " and " +
+            b.toString() +
+            ' is</p><p class="highlighted-result">' +
+            result.toString() +
+            "</p>";
 };
 const clearResult = () => {
     paragraph.textContent = "";
@@ -47,7 +54,7 @@ const requestGCDFromInputs = () => {
     if (!a || !b) {
         return;
     }
-    setResult(gcd(a, b));
+    setResult(a, b, gcd(a, b));
 };
 const reportError = (message) => {
     alert(message ||

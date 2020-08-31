@@ -40,11 +40,18 @@ const getInputValue = (id: string): bigint | null => {
   return !stringValueOrNull ? null : BigInt(stringValueOrNull as string);
 };
 
-const setResult = (result: bigint) => {
+const setResult = (a: bigint, b: bigint, result: bigint) => {
   if (!result) {
     return;
   }
-  paragraph.textContent = result.toString();
+  paragraph.innerHTML =
+    "<h1>Result</h1><p>The GCD of " +
+    a.toString() +
+    " and " +
+    b.toString() +
+    ' is</p><p class="highlighted-result">' +
+    result.toString() +
+    "</p>";
 };
 
 const clearResult = () => {
@@ -59,7 +66,7 @@ const requestGCDFromInputs = () => {
   if (!a || !b) {
     return;
   }
-  setResult(gcd(a, b));
+  setResult(a, b, gcd(a, b));
 };
 
 const reportError = (message: string) => {
