@@ -1,4 +1,4 @@
-# Number Theory Algorithms
+# Number Theory
 
 ## Introduction
 
