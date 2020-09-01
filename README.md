@@ -23,8 +23,8 @@ Create an issue for a feature request or to report a bug. Be as detailed as poss
 
 If you found the project useful, consider supporting me on Ko-fi or Patreon.
 
-[<img style="height: 36px;" src="images/kofi.webp">](https://ko-fi.com/hungrybluedev)
-[<img style="height: 36px;" src="images/patreon.webp">](https://www.patreon.com/hungrybluedev)
+[<img style="height: 36px;" height="36" src="images/kofi.webp">](https://ko-fi.com/hungrybluedev)
+[<img style="height: 36px;" height="36" src="images/patreon.webp">](https://www.patreon.com/hungrybluedev)
 
 ## License
 
