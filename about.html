@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A collection of convenient commonly used functions for number theory."
+    />
+    <title>About | Number Theory | Hungry Blue Dev</title>
+    <link rel="stylesheet" href="styles/default.css" type="text/css" />
+
+    <link rel="stylesheet" href="styles/katex.min.css" type="text/css" />
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="scripts/katex/katex.min.js"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="scripts/katex/auto-render.min.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <!-- <nav>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </nav> -->
+    </header>
+    <main id="main">
+      <h1>About</h1>
+      <section id="introduction-section">
+        <h2>Introduction</h2>
+        <p>
+          This website (also an installable, offline-capable Progressive Web
+          App) contains implementations of commonly-used number theory
+          algorithms.
+        </p>
+        <p>It was created with the following intentions:</p>
+        <ol>
+          <li>
+            <strong>Easily Accessible</strong> - from any device, even offline
+            after an initial download.
+          </li>
+          <li>
+            <strong>Easy To Use</strong> - making use of good design principles
+            and implementing efficient algorithms.
+          </li>
+          <li>
+            <strong>Dependable</strong> - ensuring that the results are correct
+            and the functionality is thoroughly tested.
+          </li>
+        </ol>
+      </section>
+      <section id="instructions-section">
+        <h2>Instructions For Use</h2>
+        <p>
+          The <a href="index.html">home page</a> contains a list of all the
+          algorithm implementations. The similar algorithms are grouped into
+          relevant sections (such as Divisibility, Primality, etc.)
+        </p>
+        <p>
+          Click on the boxed links to navigate to the webpage for that
+          respective algorithm implementation. A brief description of the
+          algorithm will be provided.
+        </p>
+        <p>
+          Fill in the input boxes appropriately and click on the main red
+          button. If the inputs are valid, then the results will appear below
+          the button.
+        </p>
+      </section>
+      <section id="created-by-section">
+        <h2>Developer Information</h2>
+        <p>
+          Created by Subhomoy Haldar (<a href="https://hungrybluedev.in/"
+            >HungryBlueDev</a
+          >).
+        </p>
+        <p>
+          The source code for this website is publicly available on
+          <a href="https://github.com/hungrybluedev/nt">Github</a>.
+        </p>
+        <h2>Dependencies</h2>
+        <ol>
+          <li>
+            <a href="https://katex.org/">$\KaTeX$</a> - To render the numeric
+            results and the mathematical expressions.
+          </li>
+          <li>
+            <a href="https://github.com/hungrybluedev/nt/deployments"
+              >Github Pages</a
+            >
+            - To host this whole project.
+          </li>
+          <li>
+            <a href="https://fonts.google.com">Google Fonts</a> - For the font:
+            <strong>Roboto</strong>.
+          </li>
+        </ol>
+      </section>
+    </main>
+    <script>
+      const renderMath = () => {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "\\[", right: "\\]", display: true },
+            { left: "$", right: "$", display: false },
+            { left: "\\(", right: "\\)", display: false },
+          ],
+        });
+      };
+      document.addEventListener("DOMContentLoaded", renderMath);
+    </script>
+  </body>
+</html>
