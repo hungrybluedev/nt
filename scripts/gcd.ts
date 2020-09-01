@@ -1,17 +1,5 @@
 import { gcd } from "./ntlib.js";
-
-const getInputStringById = (id: string): string | null => {
-  const inputElementOrNull = document.getElementById(id);
-  if (!inputElementOrNull) {
-    return null;
-  }
-  return (inputElementOrNull as HTMLInputElement).value;
-};
-
-const getInputValue = (id: string): bigint | null => {
-  const stringValueOrNull = getInputStringById(id);
-  return !stringValueOrNull ? null : BigInt(stringValueOrNull as string);
-};
+import { getInputValue } from "./util.js";
 
 const setResult = (a: bigint, b: bigint, result: bigint) => {
   if (!result) {
@@ -43,6 +31,7 @@ const requestGCDFromInputs = () => {
   const event = document.createEvent("Event");
   event.initEvent("DOMContentLoaded", true, true);
   document.dispatchEvent(event);
+  paragraph.scrollIntoView();
 };
 
 const reportError = (message: string) => {
