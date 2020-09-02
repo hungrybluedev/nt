@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A web page to run unit tests for my code."
+    />
+    <title>Tests | Number Theory | Hungry Blue Dev</title>
+    <link rel="stylesheet" href="styles/default.css" type="text/css" />
+    <link rel="stylesheet" href="styles/table.css" type="text/css" />
+    <link rel="stylesheet" href="styles/katex.min.css" type="text/css" />
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="scripts/katex/katex.min.js"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="scripts/katex/auto-render.min.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <!-- <nav>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </nav> -->
+    </header>
+    <main id="main">
+      <h1>Unit Tests</h1>
+      <section id="test-section">
+        <table id="table-for-tests">
+          <tr>
+            <th>Test</th>
+            <th>Result</th>
+          </tr>
+        </table>
+      </section>
+    </main>
+    <script>
+      const renderMath = () => {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "\\[", right: "\\]", display: true },
+            { left: "$", right: "$", display: false },
+            { left: "\\(", right: "\\)", display: false },
+          ],
+        });
+      };
+      document.addEventListener("DOMContentLoaded", renderMath);
+    </script>
+    <script type="module" src="scripts/tests.js"></script>
+  </body>
+</html>
