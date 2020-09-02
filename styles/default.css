@@ -36,12 +36,16 @@ main label {
 main input {
   font-size: 1rem;
   outline: none;
-  border: none;
+  border: 1px solid #f0f0f0;
   background-color: #f0f0f0;
   padding: 15px 1rem;
   text-align: right;
   border-radius: 15px;
   width: 100%;
+}
+main input:active,
+main input:focus {
+  border: 1px solid #333;
 }
 main button {
   display: block;
