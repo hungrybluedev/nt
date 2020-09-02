@@ -1,5 +1,5 @@
-import { gcd } from "./ntlib";
-import { getInputValue } from "./util";
+import { gcd } from "./ntlib.js";
+import { getInputValue } from "./util.js";
 const setResult = (a, b, result) => {
     if (!result) {
         return;
