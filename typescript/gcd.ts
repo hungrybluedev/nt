@@ -2,7 +2,7 @@ import { gcd } from "./ntlib.js";
 import { getInputValue } from "./util.js";
 
 const setResult = (a: bigint, b: bigint, result: bigint) => {
-  if (!result) {
+  if (result === null) {
     return;
   }
   paragraph.innerHTML =
@@ -24,10 +24,10 @@ const requestGCDFromInputs = () => {
   const a = getInputValue("input-a");
   const b = getInputValue("input-b");
   // No output if either element is null
-  if (!a || !b) {
+  if (a === null || b === null) {
     return;
   }
-  setResult(a, b, gcd(a, b));
+  setResult(a as bigint, b as bigint, gcd(a as bigint, b as bigint));
   const event = document.createEvent("Event");
   event.initEvent("DOMContentLoaded", true, true);
   document.dispatchEvent(event);

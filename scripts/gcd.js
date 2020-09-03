@@ -1,7 +1,7 @@
 import { gcd } from "./ntlib.js";
 import { getInputValue } from "./util.js";
 const setResult = (a, b, result) => {
-    if (!result) {
+    if (result === null) {
         return;
     }
     paragraph.innerHTML =
@@ -20,7 +20,7 @@ const requestGCDFromInputs = () => {
     clearResult();
     const a = getInputValue("input-a");
     const b = getInputValue("input-b");
-    if (!a || !b) {
+    if (a === null || b === null) {
         return;
     }
     setResult(a, b, gcd(a, b));
