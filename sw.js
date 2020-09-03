@@ -88,13 +88,18 @@ const filesToCache = [
   "styles/fonts/KaTeX_Typewriter-Regular.woff2",
 ];
 
-const version = "0.1.0";
+const version = "0.1.1";
 
 this.addEventListener("install", (event) => {
   event.waitUntil(
-    caches.open(version).then((cache) => {
-      return cache.addAll(filesToCache);
-    })
+    caches
+      .open(version)
+      .then((cache) => {
+        return cache.addAll(filesToCache);
+      })
+      .catch((_) => {
+        console.log("Failed to cache");
+      })
   );
 });
 
