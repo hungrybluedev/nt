@@ -94,7 +94,7 @@ const filesToCache = [
   "styles/fonts/KaTeX_Typewriter-Regular.woff2",
 ];
 
-const version = "0.1.3";
+const version = "v0.1.4";
 
 this.addEventListener("install", (event) => {
   event.waitUntil(
