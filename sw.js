@@ -1,4 +1,3 @@
-"use strict";
 const filesToCache = [
   // PWA files
   "nt.webmanifest",
