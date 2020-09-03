@@ -11,6 +11,12 @@ const filesToCache = [
   "styles/table.css",
   // Icons
   "icons/icon.svg",
+  "icons/48.webp",
+  "icons/72.webp",
+  "icons/96.webp",
+  "icons/144.webp",
+  "icons/168.webp",
+  "icons/192.webp",
   // Images
   "images/kofi.webp",
   "images/patreon.webp",
@@ -88,7 +94,7 @@ const filesToCache = [
   "styles/fonts/KaTeX_Typewriter-Regular.woff2",
 ];
 
-const version = "0.1.2";
+const version = "0.1.3";
 
 this.addEventListener("install", (event) => {
   event.waitUntil(
