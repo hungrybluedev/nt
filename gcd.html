@@ -56,6 +56,24 @@
     </header>
     <main id="main">
       <h1>Greatest Common Divisor</h1>
+      <section id="introduction-section">
+        <h2>Definition</h2>
+        <p>
+          We have two non-zero integers $a$ and $b$. An integer $d>0$ is said to
+          be the greatest common divisor for $a$ and $b$ (also denoted as $(a,
+          b)=\gcd(a, b)$) if:
+        </p>
+        <ol>
+          <li>$d \mid a$ and $d \mid b$</li>
+          <li>If $c \mid a$ and $c \mid b$ then $c \leq d$</li>
+        </ol>
+        <p>
+          We can extend the definition to include support for $0$ by observing
+          that every non-zero integer divides zero. So if one of the inputs is
+          $0$, the other value is returned. In case both the inputs are $0$, $0$
+          is returned.
+        </p>
+      </section>
       <section id="inputs">
         <label for="input-a">First integer (a)</label>
         <input id="input-a" name="input-a" type="number" placeholder="24" />
