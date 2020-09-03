@@ -3,13 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Theory | Hungry Blue Dev</title>
+    <meta name="title" content="Number Theory | Hungry Blue Dev" />
     <meta
       name="description"
       content="A collection of convenient commonly used functions for number theory."
     />
-    <title>Number Theory | Hungry Blue Dev</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://hungrybluedev.github.io/nt/" />
+    <meta property="og:title" content="Number Theory | Hungry Blue Dev" />
+    <meta
+      property="og:description"
+      content="A collection of convenient commonly used functions for number theory."
+    />
+    <meta property="og:image" content="icons/512.webp" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://hungrybluedev.github.io/nt/"
+    />
+    <meta property="twitter:title" content="Number Theory | Hungry Blue Dev" />
+    <meta
+      property="twitter:description"
+      content="A collection of convenient commonly used functions for number theory."
+    />
+    <meta property="twitter:image" content="icons/512.webp" />
     <link rel="stylesheet" href="styles/default.css" type="text/css" />
     <link rel="stylesheet" href="styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="styles/katex.min.css" type="text/css" />
+    <script defer src="scripts/katex/katex.min.js"></script>
+    <script defer src="scripts/katex/auto-render.min.js"></script>
     <link rel="shortcut icon" href="icons/icon.svg" type="image/x-icon" />
     <link rel="manifest" href="nt.webmanifest" />
   </head>
@@ -29,7 +52,11 @@
       <div class="main-container">
         <section class="category">
           <h2 class="category-title">Divisibility</h2>
-          <p>Functions related to the divisibility of integers.</p>
+          <p>Functions related to the <em>divisibility</em> of integers.</p>
+          <p>
+            An integer $a$ is said to divide $b$ (represented as $a | b$) if $b
+            = ak$ for some integer $k$.
+          </p>
           <ul>
             <li><a href="gcd.html">Greatest Common Divisor</a></li>
             <li><a href="gcd.html">Diophantine Equation</a></li>
@@ -43,6 +70,19 @@
           .register("sw.js")
           .catch((err) => console.log(err));
       }
+    </script>
+    <script>
+      const renderMath = () => {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "\\[", right: "\\]", display: true },
+            { left: "$", right: "$", display: false },
+            { left: "\\(", right: "\\)", display: false },
+          ],
+        });
+      };
+      document.addEventListener("DOMContentLoaded", renderMath);
     </script>
   </body>
 </html>
