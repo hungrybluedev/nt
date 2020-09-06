@@ -2,10 +2,12 @@
   "name": "Number Theory Algorithms",
   "short_name": "Number Theory",
   "start_url": "index.html",
+  "scope": "/nt/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#a41919",
   "description": "A collection of implementations for common number theory algorithms.",
+  "prefer_related_applications": false,
   "icons": [
     {
       "src": "icons/48.webp",
