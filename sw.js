@@ -5,6 +5,7 @@ const filesToCache = [
   "index.html",
   "about.html",
   "gcd.html",
+  // "diophantine.html",
   // CSS files
   "styles/default.css",
   "styles/header.css",
@@ -94,7 +95,7 @@ const filesToCache = [
   "styles/fonts/KaTeX_Typewriter-Regular.woff2",
 ];
 
-const version = "v0.1.9";
+const version = "v0.1.10";
 
 this.addEventListener("install", (event) => {
   event.waitUntil(
